@@ -1,0 +1,93 @@
+@mixin sizerAmp ($scale, $translateX, $translateY){
+    
+    @if($scale != 0) {
+        -moz-transform:     translateX($translateX) translateY($translateY) scale($scale);
+        -webkit-transform:  translateX($translateX) translateY($translateY) scale($scale);
+        -o-transform:       translateX($translateX) translateY($translateY) scale($scale);
+        -ms-transform:      translateX($translateX) translateY($translateY) scale($scale);
+        transform:          translateX($translateX) translateY($translateY) scale($scale);
+    }
+
+}
+
+@mixin scale__translateX( $scaleX, $scaleY, $translateX ) {
+    -moz-transform:     scaleX($scaleX) scaleY($scaleY) translateX($translateX) ;
+    -webkit-transform:  scaleX($scaleX) scaleY($scaleY) translateX($translateX) ;
+    -o-transform:       scaleX($scaleX) scaleY($scaleY) translateX($translateX) ;
+    -ms-transform:      scaleX($scaleX) scaleY($scaleY) translateX($translateX) ;
+    transform:          scaleX($scaleX) scaleY($scaleY) translateX($translateX) ;
+}
+
+
+// definição transformSetup + rotateSetup
+@mixin rotateTranslateX( $rotate, $translateX ) {
+    -moz-transform: rotate($rotate) translateX($translateX);
+    -webkit-transform: rotate($rotate) translateX($translateX);
+    -o-transform: rotate($rotate) translateX($translateX);
+    -ms-transform: rotate($rotate) translateX($translateX);
+    transform: rotate($rotate) translateX($translateX);
+}
+@mixin rotateTranslateY( $rotate, $translateY ) {
+    -moz-transform: rotate($rotate) translateY($translateY);
+    -webkit-transform: rotate($rotate) translateY($translateY);
+    -o-transform: rotate($rotate) translateY($translateY);
+    -ms-transform: rotate($rotate) translateY($translateY);
+    transform: rotate($rotate) translateY($translateY);
+}
+@mixin transformScaleTranslateX( $scale, $translateX ) {
+    -moz-transform: scale($scale) translateY($translateX);
+    -webkit-transform: scale($scale) translateY($translateX);
+    -o-transform: scale($scale) translateY($translateX);
+    -ms-transform: scale($scale) translateY($translateX);
+    transform: scale($scale) translateY($translateX);
+}
+@mixin rotateScale( $rotate, $scale ) {
+    -moz-transform: rotate($rotate) scale($scale);
+    -webkit-transform: rotate($rotate) scale($scale);
+    -o-transform: rotate($rotate) scale($scale);
+    -ms-transform: rotate($rotate) scale($scale);
+    transform: rotate($rotate) scale($scale);
+}
+
+// test Condicional 
+@mixin transform($rotate, $scale ) {
+
+    @if $rotate != 0 and $scale != 0 {
+        -moz-transform: rotate($rotate) scale($scale);
+        -webkit-transform: rotate($rotate) scale($scale);
+        -o-transform: rotate($rotate) scale($scale);
+        -ms-transform: rotate($rotate) scale($scale);
+        transform: rotate($rotate) scale($scale);    
+    } 
+    @if $rotate != 0  {
+        -moz-transform: rotate($rotate) ;
+        -webkit-transform: rotate($rotate) ;
+        -o-transform: rotate($rotate) ;
+        -ms-transform: rotate($rotate) ;
+        transform: rotate($rotate) ;
+    }
+     @if $scale !=  0 {
+        -moz-transform: scale($scale) ;
+        -webkit-transform: scale($scale) ;
+        -o-transform: scale($scale) ;
+        -ms-transform: scale($scale) ;
+        transform: scale($scale) ;
+    }
+    
+}
+
+
+@mixin rotateTranslateXY( $rotate, $translateX, $translateY ){
+    -moz-transform:     rotate($rotate) translateX($translateX) translateY($translateY);
+    -webkit-transform:  rotate($rotate) translateX($translateX) translateY($translateY);
+    -o-transform:       rotate($rotate) translateX($translateX) translateY($translateY);
+    -ms-transform:      rotate($rotate) translateX($translateX) translateY($translateY);
+    transform:          rotate($rotate) translateX($translateX) translateY($translateY);
+}
+@mixin scaleTranslateXY( $scale, $translateX, $translateY ){
+    -moz-transform:     scale($scale) translateX($translateX) translateY($translateY);
+    -webkit-transform:  scale($scale) translateX($translateX) translateY($translateY);
+    -o-transform:       scale($scale) translateX($translateX) translateY($translateY);
+    -ms-transform:      scale($scale) translateX($translateX) translateY($translateY);
+    transform:          scale($scale) translateX($translateX) translateY($translateY);
+}

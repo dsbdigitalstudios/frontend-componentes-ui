@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*
+
+	# 	recursos
+	# 	arvore de recursos
+	#	=> recuros do sistema
+	#	=> recursos do layout
+
+========================================== */
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fff;
+	margin: 0;
+}
+
+/* recuros do layout ===================== */
+.none  { 
+	display:none !important; 
+}
+.clear { 
+	clear:both; 
+}
+.listStyleNone {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	
+}
+.textNone { 
+	text-indent: -9999px  !important; 
+	overflow: hidden  !important; 
+	outline: none  !important; 
+}
+.aparence {
+	@include aparence( none );
+}
+.imgPadrao {
+	display: block;
+	width: 100%;
+	height: auto !important;
+	border: none;
+}
+
+.backPadrao {
+	@include backgroundSizer( cover );
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+/* background-position ==================== */
+.backSpec {
+	@include backgroundSizer( cover );
+	background-position-x: center;
+	background-position-y: top;
+	background-repeat: no-repeat;
+}
+
+
+
+

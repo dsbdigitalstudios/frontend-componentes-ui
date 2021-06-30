@@ -1,0 +1,71 @@
+/* show Menu ----------------- */
+@-webkit-keyframes showNotificationWhats {
+    0% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+
+    90% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+    100% {
+        left: 4.5em;
+        @include visivel (true);
+    }
+
+}
+
+@-moz-keyframes showNotificationWhats {
+    0% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+
+    90% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+    100% {
+        left: 4.5em;
+        @include visivel (true);
+    }
+
+
+}
+
+@-o-keyframes showNotificationWhats {
+    0% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+
+    90% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+    100% {
+        left: 4.5em;
+        @include visivel (true);
+    }
+
+
+}
+
+@keyframes showNotificationWhats {
+    0% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+
+    90% {
+        left: 5.33em;
+        @include visivel (false);
+    }
+    100% {
+        left: 4.5em;
+        @include visivel (true);
+    }
+
+
+}

@@ -1,0 +1,305 @@
+/* contatcForm ----------------------------- */
+.contatcForm {
+	// Globais  -------------------
+	& input[type="text"], & textarea, .selectBox, .boxDefault {
+		width: 100%;
+		height: 40px;
+		padding: 0px .7em;
+		outline: none;
+		@include posElement( 
+			$testElement 	: 0, 
+			$z_index 		: 20 
+		);
+		@include fontBase ( 
+			$textBlock 			: 1, 
+			$color 				: #fff, 
+			$size 				: 14px, 
+			$lineHeight 		: 2.5, 
+			$FontFamily 		: 1, 
+			$weight 			: $regular, 
+			$testUppCase 		: 0, 
+			$testAlign 			: -1 
+		);
+		@include borderBox( 
+			$width 			: 1px, 
+			$style 			: solid, 
+			$color 			: null
+		);
+		margin-bottom: 1em;
+		background: transparent;
+	}
+	& label {
+		@include fontBase ( 
+			$textBlock 			: 1, 
+			$color 				: #fff, 
+			$size 				: 16px, 
+			$lineHeight 		: 2.5, 
+			$FontFamily 		: 1, 
+			$weight 			: $regular, 
+			$testUppCase 		: 0, 
+			$testAlign 			: -1 
+		);
+		margin-bottom: 0;
+		
+		& em {
+			float: left;
+			margin-left: 1em;
+			line-height: 32px;
+		}
+		& input {
+			float: left;
+		}
+		&.selectBox {
+			position: relative;
+			width: 100%;
+			padding: 0;
+			& select {
+				position: relative;
+				z-index: 10;
+				width: 100%;
+				padding: 0px 1em;
+				
+
+				@include fontBase ( 
+					$textBlock 			: 1, 
+					$color 				: #7e7d7e, 
+					$size 				: 14px, 
+					$lineHeight 		: 2.5, 
+					$FontFamily 		: 1, 
+					$weight 			: $regular, 
+					$testUppCase 		: 0, 
+					$testAlign 			: -1 
+				);
+				background-color: transparent;
+				@include aparence( none );
+			}
+			&::before {
+				@include positionElement( 
+					$typeElement 		: false, 
+					$position 			: 1, 
+					$eixoX 				: right, 
+					$eixoY 				: top, 
+					$x 					: 1em, 
+					$y 					: 50%, 
+					$zi 				: 1
+				);
+				@include translateY( 
+					$translateY 		: -50%
+				);
+				width: 5px;
+				height: 20px;
+				background-image: url('../img/icone/select.png');
+				@extend .backPadrao;
+			}
+		}
+		&.date {
+			position: relative;
+			width: 100%;
+			padding: 0;
+			@extend .boxDefault;
+			border: 1px solid #7e7d7e;
+			
+			& input[type="date"] {
+				outline: none;
+				position: relative;
+				z-index: 10;
+				width: calc(100% - 1em);
+				height: 2.4em; 
+				padding: 0px 1em;
+				margin-bottom: 1em;
+				border: none;
+			}
+			&::before {
+				@include positionElement( 
+					$typeElement 		: false, 
+					$position 			: 1, 
+					$eixoX 				: right, 
+					$eixoY 				: top, 
+					$x 					: 1em, 
+					$y 					: 50%, 
+					$zi 				: 100
+				);
+				@include translateY( 
+					$translateY 		: -50%
+				);
+				width: 18px;
+				height: 16px;
+				background-image: url('../img/icone/date.png');
+				@extend .backPadrao;
+			}
+		}
+		&.time {
+			position: relative;
+			width: 100%;
+			padding: 0;
+			@extend .boxDefault;
+			& input[type="time"] {
+				outline: none;
+				position: relative;
+				z-index: 10;
+				width: 100%;
+				padding: 0px 1em;
+				margin-bottom: 1em;
+			}
+			&::before {
+				@include positionElement( 
+					$typeElement 		: false, 
+					$position 			: 1, 
+					$eixoX 				: right, 
+					$eixoY 				: top, 
+					$x 					: 1em, 
+					$y 					: 50%, 
+					$zi 				: 1
+				);
+				@include translateY( 
+					$translateY 		: -50%
+				);
+				width: 5px;
+				height: 20px;
+				background-image: url('../img/icone/select.png');
+				@extend .backPadrao;
+			}
+		}
+		&.checkBox {
+			width: 100%;
+			overflow: hidden;
+			& input[type="checkbox"] {
+				display: inline-block;
+			}
+			& em {
+				display: block;
+				width: calc(100% - 1.5em);
+				float: right;
+				margin-bottom: 1em;
+				margin-left: 0;
+				line-height: 1;
+				font-style: normal;
+			}
+			
+		}
+	}
+	// Especificos ---------------
+	& input[type="text"] {
+		line-height: 32px;
+	}
+	& input[name="randomfield"] {
+		width: 70px;
+		margin-bottom: 0;
+	}
+	& textarea {
+		height: 10.5em;
+		resize:none;
+		line-height: 1.5;
+		padding-top: .5em;
+		//padding: .3em 0;
+		&.msnServico {
+			height: 6em;
+		}
+	}
+	& input[type="submit"] {
+		@extend .cta;
+		width: 100%;
+		font-size: 14px;
+		text-align: center;
+		overflow: hidden;
+		// border-radius: 7px;
+		cursor: pointer;
+		color: #fff;
+		background-color: #0C3A79;
+	}
+	// placeholder
+	& ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: #fff;
+	} 
+	& ::-moz-placeholder { /* Firefox 19+ */
+		color: #fff;
+	} 
+	& :-ms-input-placeholder { /* IE 10+ */
+		color: #fff;
+	} 
+	& :-moz-placeholder {  /* Firefox 18- */
+		color: #fff;
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

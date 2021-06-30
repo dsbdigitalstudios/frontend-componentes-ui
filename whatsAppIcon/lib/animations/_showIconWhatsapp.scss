@@ -1,0 +1,71 @@
+/* show Menu ----------------- */
+@-webkit-keyframes showIcon_NotificationWhats {
+    0% {
+        top: -.1em;
+        @include visivel (false);
+    }
+
+    90% {
+        top: -.1em;
+        @include visivel (false);
+    }
+    100% {
+        top: -.2em;
+        @include visivel (true);
+    }
+
+}
+
+@-moz-keyframes showIcon_NotificationWhats {
+    0% {
+        top: -.1em;
+        @include visivel (false);
+    }
+
+    90% {
+        top: -.1em;
+        @include visivel (false);
+    }
+    100% {
+        top: -.2em;
+        @include visivel (true);
+    }
+
+
+}
+
+@-o-keyframes showIcon_NotificationWhats {
+    0% {
+        top: -.1em;
+        @include visivel (false);
+    }
+
+    90% {
+        top: -.1em;
+        @include visivel (false);
+    }
+    100% {
+        top: -.2em;
+        @include visivel (true);
+    }
+
+
+}
+
+@keyframes showIcon_NotificationWhats {
+    0% {
+        top: -.1em;
+        @include visivel (false);
+    }
+
+    90% {
+        top: -.1em;
+        @include visivel (false);
+    }
+    100% {
+        top: -.2em;
+        @include visivel (true);
+    }
+
+
+}

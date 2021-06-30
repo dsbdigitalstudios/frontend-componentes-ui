@@ -1,0 +1,77 @@
+// setup Menu
+$w          : 20px; 
+$h          : 15px; 
+$z-index    : 1;
+
+// color padrão
+$r          : 0; 
+$g          : 0; 
+$b          : 0; 
+$alpha      : 1;      
+$colorBg    : rgba($brand_3, $alpha);
+
+// modelbox - span
+$wCons      : 100%;
+$hBar       : 2px;
+
+.menuSanduiche {
+    position: relative; 
+    z-index: $z-index;
+    width: $w;
+    height: $h;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    @include displayFlex( 
+        $is_Flex            : true, 
+        $tipoDirection      : column,    
+        $justify_content    : 3,
+        $align_items        : flex-end );
+    @extend .t3s;
+    & span {
+        display: block;
+        z-index: 1;
+        &:nth-child(1){
+            width: $wCons / 3 * 2;    
+            margin-right: $wCons / 3 * 1;
+        }
+        &:nth-child(2){
+            width: $wCons;    
+        }
+        &:nth-child(3){
+            width: $wCons / 4 * 3;    
+        }
+        
+        height: $hBar;
+        background-color: $colorBg;
+        @extend .t3s;
+    }
+    &:hover,
+    &.ativo {
+        & span{
+            &:nth-child(1){
+                width: $wCons;    
+                margin-right: 0;
+            }
+            &:nth-child(3){
+                width: $wCons / 3 * 2;
+                margin-right: $wCons / 3 * 1;
+            }
+        }
+    }
+    &.ativo:hover {
+        & span {
+            &:nth-child(1){
+                transform: rotate(30deg);
+            }
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(3){
+                width: 190%;
+                margin-top: -0.5em;
+                margin-right: 0;
+            }
+        }
+    }
+}

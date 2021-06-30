@@ -1,0 +1,62 @@
+.gcBox {
+	&.padd4em {
+		padding:0 0 6em;
+	}
+	@include fontBase ( 
+		$textBlock 			: 1, 
+		$color 				: $gcBoxColor, 
+		$size 				: null, 
+		$lineHeight 		: 1.5, 
+		$FontFamily 		: $fontText, 
+		$weight 			: $regular, 
+		$testUppCase 		: 0, 
+		$testAlign 			: -1 
+	);
+	& a {
+		color: $gcBoxColor;
+	}
+	@include font-size($base-font-sizes);
+	@include colorAlpha (
+		$tipo 			: color, 
+		$color 			: $gcBoxColor, 
+		$alpha 			: 1
+	);
+	& .embed-responsive {
+		margin-bottom: 1em;
+	}
+	
+
+}
+.gcBox p {
+	margin-bottom: 1.5em;
+}
+
+.gcBox a                                    { text-decoration: underline; }
+.gcBox h1 {
+	@include font-size($fs-ate30px);
+}
+.gcBox h2                                   { margin-top: 1em; margin-bottom: .5em; font-weight: 700; } //font-size: $base24px; 
+.gcBox h3 {
+	@include font-size($fs-ate18px);
+	font-weight: 700 !important;
+}
+.gcBox h4                                   { font-size: 16px; font-weight: 400;}
+ .gcBox h5                                   { font-size: 14px; font-weight: 400;}
+.gcBox h6                                   { font-size: 14px; font-weight: 400;}
+.gcBox b 									{ font-weight: 700; color: #000;}
+.gcBox i 									{ font-style: oblique; }
+.gcBox sub 									{ vertical-align: sub; font-size: smaller; }
+.gcBox sup 									{ vertical-align: super; font-size: smaller; }    
+.gcBox blockquote 							{ display: block; -webkit-margin-before: 1em; -webkit-margin-after: 1em; -webkit-margin-start: 40px; -webkit-margin-end: 40px; }
+.gcBox ul 									{ padding-left: 20px; }
+.gcBox ul li                                { list-style: none; position: relative; padding-left: 1em; }
+.gcBox ul li::before 						{ content: '•'; display: block; position: absolute; top: 0; left: 0; top: .02em;}
+.gcBox ol 									{ padding-left: 20px; }
+.gcBox ol li                                { list-style: decimal; }
+.gcBox strong 								{ font-weight: 700; }
+.gcBox img {
+	display: block;
+	width: 100%;
+	height: auto !important;
+}
+

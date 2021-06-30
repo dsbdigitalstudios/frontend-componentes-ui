@@ -1,0 +1,25 @@
+
+// Skew 
+@mixin skewX( $skewX ) {
+    -moz-transform:     skewX($skewX);
+    -webkit-transform:  skewX($skewX);
+    -o-transform:       skewX($skewX);
+    -ms-transform:      skewX($skewX);
+    transform:          skewX($skewX);
+}
+// definição skewY
+@mixin skewY( $skewY ) {
+    -moz-transform:     skewY($skewY);
+    -webkit-transform:  skewY($skewY);
+    -o-transform:       skewY($skewY);
+    -ms-transform:      skewY($skewY);
+    transform:          skewY($skewY);
+}
+// definicao de tanslateNosDoisEixos 
+@mixin skewXY( $skewX, $skewY ) {
+    -moz-transform:     skewX($skewX) skewY($skewY);
+    -webkit-transform:  skewX($skewX) skewY($skewY);
+    -o-transform:       skewX($skewX) skewY($skewY);
+    -ms-transform:      skewX($skewX) skewY($skewY);
+    transform:          skewX($skewX) skewY($skewY);
+}

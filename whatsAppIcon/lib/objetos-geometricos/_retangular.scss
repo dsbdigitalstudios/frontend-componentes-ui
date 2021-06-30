@@ -1,0 +1,17 @@
+// retangular
+@mixin rect($h, $w) {
+	display: block;
+	width: $w;
+	height: $h;
+}
+@mixin shape($h, $w, $color, $alpha, $radius) {
+	@include rect($h, $w);
+	@include colorAlpha (bg, $color, $alpha);
+	@if ($radius != 0) {
+		border-radius: ($radius)*1px;
+	}
+}
+@mixin shapeVazado($h, $w, $color, $alpha) {
+	@include rect($h, $w);
+	@include colorAlpha (border, $color, $alpha);
+}

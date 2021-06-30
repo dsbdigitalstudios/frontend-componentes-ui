@@ -1,0 +1,142 @@
+#navFixedBottom {
+    &.ctaNavNoView {
+        bottom: 0;
+        @include animation (
+            $name       : showSidebarBottom,
+            $duration   : 1s,
+            $timing     : ease);
+        & a {
+            border: none;
+            &.whatsapp {
+                background-color:#56bb63;
+                color: #fff;
+                border-radius: 50%;
+                width: 52px;
+                height: 52px;
+                position: relative;
+                &::before {
+                    content: '1';
+                    display: block;
+                    position: absolute;
+                    top: -.2em;
+                    right: -.1em;
+                    background-color: red;
+                    color: #fff;
+                    border-radius: 50%;
+                    text-align: center;
+                    overflow: hidden;
+                    width: 1.15em;
+                    padding: 0.125em;
+                    @include animation (
+                        $name       : showIcon_NotificationWhats,
+                        $duration   : 3s,
+                        $timing     : ease);
+                    //animation-delay: 3s;
+                }
+                & div {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 auto;
+                    & svg {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.iconWhatsapp {
+    position: fixed;
+    left: 1em;
+    bottom: 0;
+    @include animation (
+        $name       : showSidebarBottom,
+        $duration   : 1s,
+        $timing     : ease);
+    z-index: 9999;
+    font-size: 18px;
+    padding-bottom: 1.5em;
+    @extend .t3s;
+    @media screen and (max-width:1170px) {
+        &.noMobile {
+            display: none;
+        }
+    }
+    & a {
+        border: none;
+        display: block;
+        padding: .8em !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        line-height: 1;
+        font-family: "BMW Group", sans-serif;
+        font-weight: 300;
+        &.whatsapp {
+            background-color:#56bb63;
+            color: #fff;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            position: relative;
+            @extend .t3s;
+            &:hover {
+                -webkit-box-shadow: 0 10px 20px 1px rgba(0,0,0,.3);
+                box-shadow: 0 10px 20px 1px rgba(0,0,0,.6);
+            }
+            &::before {
+                content: '1';
+                display: block;
+                position: absolute;
+                top: -.2em;
+                right: -.1em;
+                background-color: red;
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                overflow: hidden;
+                width: 1.15em;
+                padding: 0.125em;
+                @include animation (
+                    $name       : showIcon_NotificationWhats,
+                    $duration   : 4s,
+                    $timing     : ease);
+                //animation-delay: 3s;
+            }
+            & .fraseWhats {
+                display: block;
+                position: absolute;
+                font-style: normal;
+                top: 50%;
+                left: 4.5em;
+                width: max-content; 
+                height: auto;
+                background-color: red;
+                color: #fff;
+                border-radius: 50px;
+                text-align: center;
+                overflow: hidden;
+                padding: 0.33em 1em;
+                @include translateY( -50% );
+                // width: 1.15em;
+                @include animation (
+                    $name       : showNotificationWhats,
+                    $duration   : 5s,
+                    $timing     : ease);
+                // animation-delay: 4s;
+            }
+            & div {
+                width: 30px;
+                height: 30px;
+                margin: 0 auto;
+                & svg {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}

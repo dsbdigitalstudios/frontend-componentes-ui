@@ -1,0 +1,10 @@
+
+@mixin animation ($name, $duration, $timing) {
+    animation-duration: $duration;
+    animation-name: $name;
+    animation-timing-function: $timing;
+}
+
+@import "lib/animations/_showMenu.scss";
+@import "lib/animations/_showIconWhatsapp.scss";
+@import "lib/animations/_showNotificationsWhatsapp.scss";

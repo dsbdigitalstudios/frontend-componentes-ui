@@ -1,0 +1,46 @@
+@charset "UTF-8";
+// A classe ".cta" ela é o tipo de classe que nào pode ser 
+// usada em nenhum outro lugar pois ela, assim como a classe
+// ".btn" do bootstrap, é uma classe espcial para framework.
+
+.ctaBox {
+    width: 300px;
+    & .cta {
+        padding: 0.7em 0;
+        &:nth-child(1){
+            margin-bottom: 1em;
+        }
+    }
+}
+
+// A base do estilo de .cta --> A cahamada é por @extend
+.cta {
+    padding: 1em 1.5em;  
+    @include fontBase (
+        $textBlock  : inline, 
+        $color      : null, 
+        $size       : 16px, 
+        $lineHeight : 1, 
+        $FontFamily : $fontLink, 
+        $weight     : $light, 
+        $testUppCase : 1, 
+        $testAlign  : 0
+    );
+    border-radius: 10px;
+    text-decoration: none;
+    @extend .t3s;
+    // Casos singulares
+    &.fullsize {
+        display: block;
+        width: 100% !important;
+    }
+    &.bgRed {
+        background-color: $secondary1;
+        color: $secondary3;
+    }
+    // hovers
+    &:hover {
+        background-color: $brand_1;
+        text-decoration: none;
+    }
+}

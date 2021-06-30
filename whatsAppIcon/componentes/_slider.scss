@@ -1,0 +1,175 @@
+// Slide principal
+.slideMain {
+    height: 100vh;
+    @extend .backSpec;
+    position: relative;
+    &::before {
+        @include positionElement( 
+            $typeElement        : false, 
+            $position           : 1, 
+            $eixoX              : left, 
+            $eixoY              : top, 
+            $x                  : 0, 
+            $y                  :0 , 
+            $zi                 : 1);
+        @include shape(100%, 100%, #000, .5, 0);
+    }
+    & .container {
+        height: 100%;
+        position: relative;
+        z-index: 100;
+        & .content {
+            height: 100%;
+        }
+    }
+    & h2 {
+        @include fontBase ( 
+            $textBlock   : block, 
+            $color       : $secondary3, 
+            $size        : null, 
+            $lineHeight  : 1, 
+            $FontFamily  : $fontPadrao, 
+            $weight      : $bold, 
+            $testUppCase : null, 
+            $testAlign   : -1 );
+        @include font-size($fs-ate40px);
+        margin: 0;
+        &::after {
+            content: '';
+            display: block;
+            width: 2em;
+            height: 5px;
+            margin: .5em 0;
+            background-color: #fff;
+        }
+    }
+    & h3 {
+        margin: 0;
+        @include fontBase ( 
+            $textBlock   : block, 
+            $color       : $secondary3, 
+            $size        : null, 
+            $lineHeight  : 1, 
+            $FontFamily  : $fontPadrao, 
+            $weight      : $light, 
+            $testUppCase : null, 
+            $testAlign   : -1 );
+        @include font-size($fs-ate30px);
+    }
+    & a {
+        margin-top: 2em;
+    }
+    & figure {
+        width: 100%;
+        margin: 0;
+        & img {
+            @extend .imgPadrao;
+        }
+    }
+}
+
+// Slide vantagens - rules
+.slideFantagens{
+    position: relative;
+    & .container {
+        position: relative;
+        z-index: 1;
+    }
+    & .sliderNav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        padding: 0px 2em;
+        & a {
+            display: block;
+            width: 45px;
+            height: 160px;
+            @extend .backSpec;
+            @extend .textNone;
+            &.prev {
+                background-image: url('../img/icone/seta-vantagem-prev.png');
+            }
+            &.next {
+                background-image: url('../img/icone/seta-vantagem-next.png');
+            }
+        }
+    }
+    & .owl-nav {
+        @include displayFlex( true, row, 0, center );
+    }
+}
+.listaInterface{
+    & .owl-carousel{
+        position: relative;
+    }
+    & .owl-nav {
+        position: absolute;
+        bottom: 0em;
+        right: 0;
+        width: 50%;
+        @include displayFlex( true, row, 1, center );
+        display: flex !important;
+        & span {
+            display: none;
+        }
+    }
+    & .owl-dots {
+        position: absolute;
+        bottom: 0em;
+        left: 0;
+        width: 50%;
+        position: relative;
+        z-index: 1;
+        display: block !important;
+    }
+}
+
+.modelButton {
+    display: block;
+    width: 15px !important;
+    height: 10px !important;
+    margin-left: .5em;
+    outline: none;
+    @extend .backSpec;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    @extend .modelButton;
+    background-image: url('../img/icone/slide/right.png') !important;
+    &:hover {
+        background-image: url('../img/icone/slide/right-hover.png') !important;
+    }
+} 
+.owl-carousel .owl-nav button.owl-prev {
+    @extend .modelButton;
+    background-image: url('../img/icone/slide/left.png') !important;
+    &:hover {
+        background-image: url('../img/icone/slide/left-hover.png') !important;
+    }
+}
+
+.owl-carousel .owl-dot {
+    margin-right: .3em;
+    @extend .t3s;
+    outline: none;
+    & span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        @include borderBoxAlpha( 1px, solid, $brand_2, 1 );
+        @extend .t3s;
+    }
+    &:hover {
+        background-color: $brand_2;
+        border-radius: 50%;
+    }
+    &.active {
+        & span {
+            background-color: $brand_3;
+            @include borderBoxAlpha( 1px, solid, $brand_2, 0 );
+        }
+    }
+}

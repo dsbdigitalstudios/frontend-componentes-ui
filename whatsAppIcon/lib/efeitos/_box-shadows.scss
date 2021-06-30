@@ -1,0 +1,15 @@
+@mixin innerShadowBox($horizontal, $vertical, $blur, $spread, $color, $alpha ) {
+    box-shadow: inset $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -webkit-box-shadow: inset $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -ms-box-shadow: inset $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -moz-box-shadow: inset $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -o-box-shadow: inset $horizontal $vertical $blur $spread rgba($color, $alpha) ; 
+}
+
+@mixin shadowbox($horizontal, $vertical, $blur, $spread, $color, $alpha ) {
+    box-shadow: $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -webkit-box-shadow: $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -ms-box-shadow: $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -moz-box-shadow: $horizontal $vertical $blur $spread rgba($color, $alpha) ;
+    -o-box-shadow: $horizontal $vertical $blur $spread rgba($color, $alpha) ; 
+}

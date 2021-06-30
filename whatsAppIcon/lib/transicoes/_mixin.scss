@@ -1,0 +1,19 @@
+// transitions
+@mixin transitions( $duracao ) {
+    -webkit-transition: all $duracao ease;
+    -moz-transition:    all $duracao ease;
+    -ms-transition:     all $duracao ease;
+    -o-transition:      all $duracao ease;
+    transition:         all $duracao ease;
+}
+
+
+
+
+
+
+
+
+
+
+

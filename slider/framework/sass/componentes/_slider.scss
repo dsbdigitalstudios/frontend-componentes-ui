@@ -1,0 +1,280 @@
+// Variaveis globais ====================
+$bgPalco                : $cinzaChumbo;
+// from coverVideo 
+$fxBgImg1               : transparent;
+$fxBgImg2               : transparent;
+
+// MArcador
+$marcadorColor          : $secondary6;
+
+// icone NavSlide
+$navSliderIcon          : $secondary6;
+
+// MArcador Numerico
+$marcadorColorNum       : $secondary6;
+$marcadorColorNumAtivo  : $secondary6;
+// === testesLógicos ==================
+$temMarcdorNumerico     : true;
+$temMarcdor             : true;
+$temVideo               : true;
+$temMouseIcon           : true;
+
+#slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    background-color: $bgPalco;
+
+    // Slider dentro de um outro container
+    &.contaienrBlogView {
+        padding: 7em 0 3em;
+        height: 85vh;
+    }
+    & .slideBlogs {
+        position: relative;
+        width: 90vw;
+        height: 100%;
+        margin: 0 auto;
+        & h1 {
+            position: absolute;
+            top: 2em;
+            left: .67em;
+            @extend .textDefault;
+                @include font-size($fs-ate24px);
+                color: $white;
+                margin: 0;
+        }
+    }
+    & .coverVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        & .imgItem {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @extend .backSpec;
+            @if $fxBgImg1 != transparent {
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 50;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($fxBgImg1, .67);
+                    mix-blend-mode: multiply;
+                }
+            }
+            @if $fxBgImg2 != transparent {     
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 75;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($fxBgImg2, .33);
+                    mix-blend-mode: multiply;
+                }
+            }
+        }
+    }
+    & .navSlide {
+        position: absolute;
+        bottom: 2em;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        @if $temMarcdor != false {
+            & ul {
+                @extend .listStyleNone;
+                & li {
+                    margin-left: 1em;
+                    &:nth-child(1){
+                        margin-left: 0;
+                        
+                    }
+                    & a {
+                        display: block;
+                        & span {
+                            display: block;
+                            width: 6px;
+                            height: 6px;
+                            background-color: $marcadorColor;
+                            border-radius: 7px;
+                            @include transitions( .3s );;
+                        }
+                        @include transitions( .3s );;
+                        &.ativo {
+                            & span {
+                                width: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .slideNav {
+            & a {
+                display: block;
+                color: $navSliderIcon;
+                margin-left: 1em;
+            }
+        }
+    }
+    & .container {
+        position: relative;
+        z-index: 80;
+        height: 100%;
+        & > .row  {
+            & .contentBlog {
+                & h2 {
+                    @include font-size($fs-ate48px);
+                }
+                & h3 {
+                    @include font-size($fs-ate24px);
+                }
+            }
+            height: 100%;
+            & h1 {
+                @extend .textDefault;
+                @include font-size($fs-ate24px);
+                color: $white;
+                margin: 0;
+            }
+             & h2 {
+                 @extend .textDefault;
+                 @include font-size($fs-ate36px);
+                 color: $white;
+                 margin: 0;
+                 
+             }
+             & h3 {
+                @extend .titleMain;
+                @include font-size($fs-ate64px);
+                color: $white;
+                margin: 0;
+                line-height: 1.1 !important;
+                & b {
+                    color: $brand_3 ;
+                }
+                &.subTitlePageView {
+                    @include font-size($fs-ate48px);
+                 }
+             }
+        }
+    }
+    @if $temMarcdorNumerico != false {     
+        & .marcador {
+            position: absolute;
+            top: 50%;
+            left: 2em;
+            @include translateY( -50% );
+            z-index: 80;
+            @media screen and (max-width: 1280px) {
+                display: none;
+            }
+            & ul {
+                @extend .listStyleNone;
+                & li {
+                    margin-top: 1em;
+                    &:nth-child(1){
+                        margin-top: 0;
+                    }
+                    & a {
+                        @extend .textDefault;
+                        font-size: 14px;
+                        color: $marcadorColorNum;
+                        text-decoration: none;
+                        @include transitions( .3s );;
+                        &.ativo {
+                            color: $marcadorColorNumAtivo;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+    @if $temVideo != false {
+        
+        & .playerVideo {
+            position: absolute;
+            bottom: 10vh;
+            left: 50%;
+            z-index: 99;
+            @include translateX( -50% );
+            & a  {
+                display: block;
+                & img {
+                    display: block;
+                    border: none;
+                    width: 80px;
+                    margin-right: 1em;
+                }
+                @extend .subtitle;
+                @include font-size($fs-ate24px);
+                color: $white;
+                margin: 0;
+                text-decoration: none;
+            }
+        }
+    }
+    @if $temMouseIcon != false{
+        
+        & .mousebox {
+            position: absolute;
+            bottom: 2em;
+            right: 2em;
+            z-index: 99;
+        }
+    }
+}
+
+@media screen and (max-width:1280px){
+
+    #slider .mousebox {
+        display: none;
+    }
+    #slider .playerVideo {
+        bottom: 5vh; 
+    }
+
+}
+
+@media screen and (max-width:991px){
+    #slider {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:740px) {
+    #slider {
+        height: 100vh;
+    }
+    #slider .playerVideo a img {
+        width: 54px;
+    }
+}
+
+// FX
+// transitions
+@mixin transitions( $duracao ) {
+    -webkit-transition: all $duracao ease;
+    -moz-transition:    all $duracao ease;
+    -ms-transition:     all $duracao ease;
+    -o-transition:      all $duracao ease;
+    transition:         all $duracao ease;
+}
+

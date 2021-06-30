@@ -1,0 +1,49 @@
+// heights
+$base-heights-21x9: (
+  null: 540px,
+  360px: 36em,
+  414px: 640px,
+  768px: 920px,
+  1024px: 650px,
+  1280px: 640px,
+  1440px: 720px,
+  1920px: 822px
+);
+
+$base-minHeights-21x9: (
+  null: 540px,
+  360px: 36em,
+  420px: 640px,
+  768px: 680px,
+  1000px: 760px,
+  1440px: 822px
+);
+
+$destaqueSite: (
+  null: 100vh,
+  576px: 80vh,
+  768px: 100vh
+);
+
+$base-heights-16x9: (
+  
+  null: 232px,
+  768px: 432px,
+  1024px: 576px,
+  1200px: 652px,
+  1380px: 640px,
+  1440px: 900px,
+  1920px: 1080px
+);
+
+/// ratio - width
+$base-ratioW-16x9: (
+  
+  null: 575px,
+  768px: 768px,
+  1024px: 1024px,
+  1200px: 1200px,
+  1380px: 1380px,
+  1440px: 1440px,
+  1920px: 1920px
+);

@@ -1,0 +1,41 @@
+//Triangulo
+@mixin triangle($direcao,$w,$h,$backColor) {
+
+	@if($direcao = top ) {
+		width: 0;
+		height: 0;
+		@include borderBox( 
+			$width 			: 0 $w/2 $h $w/2, 
+			$style 			: solid, 
+			$color 			:  transparent transparent $backColor transparent
+		);
+	}
+	@if($direcao = right ) {
+		width: 0;
+		height: 0;
+		@include borderBox( 
+			$width 			: $h/2 0 $h/2 $w, 
+			$style 			: solid, 
+			$color 			:  transparent transparent transparent $backColor
+		);
+	}
+	@if($direcao = bottom ) {
+		width: 0;
+		height: 0;
+		@include borderBox( 
+			$width 			: $h $w/2 0 $w/2, 
+			$style 			: solid, 
+			$color 			: $backColor transparent transparent transparent
+		);
+	}
+	@if($direcao = left ) {
+		width: 0;
+		height: 0;
+		@include borderBox( 
+			$width 			: $w/2 $h $w/2 0, 
+			$style 			: solid, 
+			$color 			: transparent $backColor transparent transparent
+		);
+	}
+
+}

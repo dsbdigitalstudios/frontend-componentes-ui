@@ -1,0 +1,100 @@
+// Mapas de Fontes ----------------------------------------
+// 		O uso dos mapas se baseia no tamanho máximo e, 
+// 		de forma descendente, ele determina o tamanho 
+//		mínimo para cada breakpoint
+//
+//		Uso:
+// 		p.fontText {
+//			@include font-size($p-font-sizes);
+//		}
+
+//Fonts
+$base-font-sizes: (null : 16px,
+1440px : 17px,
+1920px: 18px);
+
+
+$navMenu: (
+  null : 14px,
+  1024px : 16px,
+  1440px : 18px);
+
+// Matriz
+$fs-ate18px: (null : 16px,
+1440px : 17px,
+1920px: 18px);
+
+$fs-ate22px: (null : 18px,
+768px : 20px,
+1024px: 22px);
+
+$fs-ate20px: (null : 18px,
+    768px : 19px,
+    1024px: 20px);
+
+$fs-ate24px: (null: 20px,
+1280px: 22px,
+1440px: 24px);
+
+$fs-ate30px: (
+null : 18px,
+480px : 20px,
+576px : 22px,
+768px : 24px,
+1024px: 28px,
+1280px: 30px);
+
+$fs-ate32px: (null : 22px,
+768px : 24px,
+1024px: 28px ,
+1280px: 32px );
+
+$fs-ate36px: (null : 20px ,
+768px : 22px ,
+1024px: 32px ,
+1440px: 36px );
+
+$fs-ate38px: (null : 20px ,
+768px : 22px ,
+1024px: 32px ,
+1440px: 38px );
+
+$fs-ate40px: (null : 30px ,
+768px : 32px ,
+1024px: 36px ,
+1440px: 40px ,
+);
+
+$fs-ate48px: (
+null : 22px ,
+480px: 24px ,
+576px: 32px ,
+768px : 36px ,
+1024px: 42px ,
+1440px: 48px ,
+);
+
+$fs-ate60px: (null : 32px ,
+768px : 36px ,
+1024px: 48px ,
+1440px: 60px ,
+);
+
+$fs-ate65px: (null : 32px ,
+768px : 36px ,
+1024px: 48px ,
+1440px: 65px ,
+);
+
+$fs-ate72px: (
+    null : 32px ,
+    768px : 48px ,
+    1024px: 64px ,
+    1440px: 72px ,
+);
+$fs-ate128px: (
+    null : 54px ,
+    768px : 72px ,
+    1024px: 92px ,
+    1440px: 128px ,
+);

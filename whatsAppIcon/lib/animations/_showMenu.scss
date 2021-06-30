@@ -1,0 +1,55 @@
+/* show Menu ----------------- */
+@-webkit-keyframes showSidebarBottom {
+    0% {
+        bottom: -6em;
+        @include visivel (false);
+    }
+
+    100% {
+        bottom: 0;
+        @include visivel (true);
+    }
+
+}
+
+@-moz-keyframes showSidebarBottom {
+    0% {
+        bottom: -6em;
+        @include visivel (false);
+    }
+
+    100% {
+        bottom: 0;
+        @include visivel (true);
+    }
+
+
+}
+
+@-o-keyframes showSidebarBottom {
+    0% {
+        bottom: -6em;
+        @include visivel (false);
+    }
+
+    100% {
+        bottom: 0;
+        @include visivel (true);
+    }
+
+
+}
+
+@keyframes showSidebarBottom {
+    0% {
+        bottom: -6em;
+        @include visivel (false);
+    }
+
+    100% {
+        bottom: 0;
+        @include visivel (true);
+    }
+
+
+}

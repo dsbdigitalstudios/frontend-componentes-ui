@@ -1,0 +1,98 @@
+
+// youtubeAPI
+.youtubeAPI {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        background-color: rgba($color: #000000, $alpha: 0);     
+    }
+	@media screen and (max-width: 1170px) {
+		width: 110%;
+		left: -10%;
+	}
+	@media screen and (max-width: 1170px) {
+		width: 120%;
+		left: -20%;
+	}
+
+	@media screen and (max-width: 740px) {
+		left: -110%;
+    	width: 260%;
+	}
+}
+
+.contentMain {
+    position: relative;
+    z-index: 100;
+}
+
+.tv {
+    background: #000;
+    position: initial !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
+}
+
+.video-foreground {
+    width: 100%;
+    height: 0;
+    top:0;
+    padding-bottom: 56.25%;
+    /* Aspect ratio */
+    position: absolute;
+}
+
+.tv iframe {
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 120%;
+    height: 100%;
+    pointer-events: none;
+}
+
+@media (max-width: 1320px) {
+    .video-foreground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground {
+        height: 339%;
+        top: -120%;
+        width: 102%;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-foreground {
+        height: 339%;
+        top: -120%;
+        width: 102%;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}

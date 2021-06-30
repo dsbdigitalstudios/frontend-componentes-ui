@@ -1,0 +1,7 @@
+@mixin gradient($is_Gradient, $angulo, $firstColor, $firstAlpha, $start, $secondColor, $secondAlpha, $end ) {
+
+    @if ($is_Gradient == linear) {
+        background-image: linear-gradient($angulo, rgba($firstColor,$firstAlpha) $start, rgba($secondColor, $secondAlpha )  $end);    
+    }
+
+}

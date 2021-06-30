@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*
+
+	Document   	: estilos.css
+	Autor		: @douglasdsbraga - designer digital and front-end developer 
+
+*/
+
+// Global init 
+@import "global/_variaveis.scss"; 					// Carrega toddas as variaveis do projeto
+@import "global/_functions.scss"; 					// Carrega as funções
+
+// Bibliotecas ------------------------------------------ 
+// Mapeamento
+@import "lib/mapeamento/_fonts.scss";
+@import "lib/mapeamento/_heights.scss";
+
+
+// menus
+@import "lib/menus/_menuSAnduiche.scss";
+
+// Objetos geométricos
+@import "lib/objetos-geometricos/_quadrado.scss";
+@import "lib/objetos-geometricos/_retangular.scss";
+@import "lib/objetos-geometricos/_triangulo.scss";
+
+// Transformacões
+@import "lib/transformacoes/_rotate.scss";
+@import "lib/transformacoes/_scale.scss";
+@import "lib/transformacoes/_skew.scss";
+@import "lib/transformacoes/_translate.scss";
+@import "lib/transformacoes/_mixins.scss";
+
+// Transições
+@import "lib/transicoes/_mixin.scss";
+@import "lib/transicoes/_transitions.scss";
+
+// efeitos
+@import "lib/efeitos/_animations.scss";
+@import "lib/efeitos/_box-shadows.scss";
+@import "lib/efeitos/_grayScale.scss";
+@import "lib/efeitos/_text-shadow.scss";
+@import "lib/efeitos/_gradientes.scss";
+
+////////////////////////////////////////////////////////////
+
+// Componetes  ------------------------------------------ 
+// @import "componentes/_botoes.scss";
+// @import "componentes/_form.scss";
+// @import "componentes/_slider.scss";
+// @import "componentes/_gcBox.scss";
+// @import "componentes/_breadcrumbs.scss";
+// @import "componentes/_modal.scss";
+
+
+// Navigations ------------------------------------------ 
+// @import "navigation/_header.scss";
+// @import "navigation/_footer.scss";
+// @import "navigation/_paginacao.scss";
+// @import "navigation/_menuResponsivo.scss";
+
+// layout -----------------------------------------------
+// @import "layout/_recursos.scss"; 					// Classes e Ids usados para casos especiais
+// @import "layout/_pages.scss"; 						// Regras globais para todas as páginas
+// @import "layout/_sessions.scss"; 					// Regras globais para cada sessão dentro da página
+
+// Páginas ---------------------------------------------
+@import "paginas/_custom.scss";
+
+
+/*
+// Terceiros -------------------------------------------
+@import "terceiros/owl-carousel/owl.carousel.scss";
+
+// responsivo - breakpoint
+@import "responsivo/breakpoint/_viw01-wideScreen.scss";
+@import "responsivo/breakpoint/_viw02-desktops.scss";
+@import "responsivo/breakpoint/_viw03-tablets.scss";
+@import "responsivo/breakpoint/_viw04-smartphone.scss";
+
+// responsivo - divice ( max e min width )
+@import "responsivo/_tabletsView.scss";
+@import "responsivo/_smartphoneView.scss";
+
+// responsivo - por dispositivo
+@import "responsivo/device/_iPadView.scss";
+@import "responsivo/device/_iphoneView.scss";*/
+
+
+

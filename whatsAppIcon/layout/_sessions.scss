@@ -1,0 +1,77 @@
+
+
+/* ---------------------------------------- 
+#   De forma similar aos _pages.sass, 
+#   este documento contém todos as características 
+#   comuns entre todas as sessões da página.  
+#   Aqui inclui-se as tags <session>, <article>
+#   <div> e entre outras estrturas de bloco e estes 
+#   estilos são chamados pelo @extend
+#  ---------------------------------------- */
+/*
+// pagePadrao
+.setDefault {
+    @include font-size($fs-ate24px);
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background-color: #fff;
+    &.bgLilaz {
+        @include colorAlpha (bg, $brand_2, .1);
+    }
+}
+
+
+// estrtura básica de todos os títulos 
+// com as seguintes características: 
+// outer glow e gradinte na fonte.
+.titleMain {
+    
+    @include font-size($fs-ate48px);
+    @include fontBase (
+        $textBlock : block,
+        $color : $brand_2,
+        $size : null,
+        $lineHeight : 1,
+        $FontFamily : $fontPadrao,
+        $weight : $bold,
+        $testUppCase : 1,
+        $testAlign : -1);
+}
+
+// Subtitle
+.subtitle {
+    
+    @include font-size($fs-ate36px);
+    @include fontBase ($textBlock : block,
+        $color : $brand_3,
+        $size : null,
+        $lineHeight : 1,
+        $FontFamily : $fontPadrao,
+        $weight : $bold,
+        $testUppCase : null,
+        $testAlign : -1);
+}
+
+
+.textDefaul {
+    @include font-size($fs-ate24px);
+    @include fontBase ($textBlock : block,
+        $color : $brand_2,
+        $size : null,
+        $lineHeight : 1,
+        $FontFamily : $fontPadrao,
+        $weight : $regular,
+        $testUppCase : null,
+        $testAlign : -1);
+}
+
+// figure defaults
+.imgSetup{
+    display: block;
+    width: 100%;
+    margin: 0;
+    & img {
+        @extend .imgPadrao;
+    }
+}
+*/

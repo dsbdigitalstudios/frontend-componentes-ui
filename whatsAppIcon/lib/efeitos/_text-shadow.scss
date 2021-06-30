@@ -1,0 +1,4 @@
+// text-shadow
+@mixin text_wShadow($h-offset, $v-offset, $blur, $color, $alpha) {
+    text-shadow: $h-offset $v-offset $blur rgba($color, $alpha);
+}

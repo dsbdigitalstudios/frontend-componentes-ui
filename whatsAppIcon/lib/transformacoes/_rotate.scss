@@ -1,0 +1,8 @@
+// definição rotateSetup
+@mixin rotateSetup( $rotate ) {
+    -moz-transform: rotate($rotate);
+    -webkit-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    transform: rotate($rotate);
+}

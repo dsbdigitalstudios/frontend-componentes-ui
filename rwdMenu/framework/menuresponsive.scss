@@ -1,0 +1,132 @@
+.rwdMenu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(#000, .8);
+    @include visivel (false);
+    @extend .t3s;
+    &.showMenu{
+        @include visivel (true);
+    }
+    & .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        // background-color: rgba(#fc0, .7);
+    }
+    &.negativeColor {
+        & a {
+            color: #fff;
+            & .icon{
+                color: #fff;
+            }
+        }
+    }
+    & .palcoRWD {
+        height: 100%;
+        position: relative;
+        z-index: 9;
+        overflow-x: hidden;
+        overflow-y: auto;
+        & .row {
+            height: 100vh;
+            & .contentMenu {
+                position: relative;
+                z-index: 99;
+                height: 100%;
+                background-color: #000;
+                padding: 3em 0 4em;
+                font-size: 18px;
+                & .menuSanduiche {
+                    position: absolute;
+                    top: 2em;
+                    right: 2em;
+                }
+                & nav {
+                    padding: 0 3em 1em;
+                }
+                & h3 {
+                    margin: 0;
+                    overflow: hidden;
+                    outline: none;
+                    @extend .textDefault;
+                    font-size: 1.5em;
+                    color: #fff;
+                    & a {
+                        display: block;
+                        color: #fff;
+                        & .icon {
+                            color: #fff;    
+                            display: block;
+                            width: 119px;
+                            height: 46px;
+                        }
+                    }
+                }
+                & p {
+                    @extend .textDefault;
+                    font-size: 14px;
+                    color: #fff;
+                    & a {
+                        display: block;
+                        color: #fff;
+                        margin-bottom: 2em;
+                    }
+                }
+                & ul {
+                    &.menuMain {
+                        margin-top: 2em;
+                        margin-bottom: 2em;
+                    }
+                    &.socialRWD {
+                        & li {
+                            margin-right: 1em;
+                        }
+                    }
+                    @extend .listStyleNone;
+                    font-size: 16px;
+                    & li {
+                        padding: 0.5em 0;
+                        & a {
+                            @extend .textDefault;
+                            font-size: 1em;
+                            color: #fff;
+                            &.customBtn {
+                                display: inline-block;
+                                padding: 1em 1.5em;
+                                color: #fff;
+                                border-radius: 34px;
+                                &.btn-laranja {
+                                    background-color: $brand_2;
+                                    margin-top: 2em;
+                                }
+                                &.btn-azul {
+                                    display: inline-flex !important;
+                                    @include displayFlex( true, row, 0, center );
+                                    background-color: $brand_1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1170px){
+    .rwdMenu .palcoRWD .row {
+        height: 100%;
+    }
+    .rwdMenu .palcoRWD .row .contentMenu {
+        height: auto;
+    } 
+}

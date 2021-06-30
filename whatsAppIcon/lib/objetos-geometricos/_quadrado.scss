@@ -1,0 +1,6 @@
+//Quadrado
+@mixin square($size) {
+	display: block;
+	width: $size;
+	height: $size;
+}
