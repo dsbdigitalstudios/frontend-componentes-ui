@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@use "sass:math";
+// Convensões
+$base16em                   : 16px;
+$base16em                   : 16 * 1em;
+
+// paleta de cores
+$brand_1                    : #53C6F5;
+$brand_2                    : #6768A9;
+$brand_3                    : #E7689F;
+$secondary1                 : #E60019;
+$secondary2                 : #003561;
+$secondary3                 : #fff;
+
+
+
+// Mapeamento de cores
+$gcBoxColor                 : $secondary2;
+
+// Load Maps ----------------------------------------
+@import "lib/mapeamento/_fonts.scss";         // Tamanho de fontes mapeadas
+@import "lib/mapeamento/_heights.scss";      // Mapa de Alturas de containers - determina 
+                                              // o tamanho mínimo para cada breakpoint 
+                                              // em relação ao viewport
+
+// Fontes ----------------------------------------
+$roboto              : 'Roboto', sans-serif;
+
+// familia de fontes do proejto
+$fontPadrao		      : $roboto;
+$fontPadraoTitulo     : $roboto;
+$fontTitles           : $fontPadraoTitulo;
+$fontSubtitles        : $fontPadraoTitulo;
+$fontText 	          : $fontPadrao;
+$fontLink 	          : $fontPadraoTitulo;
+
+// font weghth
+$thin 			: 100;
+$extralight 	: 200;
+$light 			: 300;
+$regular 		: 400;
+$medium 		: 500;
+$semi-bold 		: 600;
+$bold 			: 700;
+$black 			: 900;
+
+
+
