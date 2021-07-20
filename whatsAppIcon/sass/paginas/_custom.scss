@@ -50,7 +50,7 @@
 
 .iconWhatsapp {
     position: fixed;
-    left: 1em;
+    right: 1em;
     bottom: 0;
     @include animation (
         $name       : showSidebarBottom,
@@ -110,7 +110,7 @@
                 position: absolute;
                 font-style: normal;
                 top: 50%;
-                left: 4.5em;
+                right: 4.5em;
                 width: max-content; 
                 height: auto;
                 background-color: red;

@@ -24,7 +24,7 @@ function style() {
         .pipe(postcss([autoprefixer(), cssnano()]))
         // Now add/write the sourcemaps
         // .pipe(sourcemaps.write())
-        .pipe(concat('whatsappicon.min.css'))
+        .pipe(concat('whatsappicon-right.min.css'))
         .pipe(gulp.dest('../src/css/'));
 }
 
