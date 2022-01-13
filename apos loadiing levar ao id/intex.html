@@ -1,0 +1,13 @@
+<script>
+
+    /*
+    Após abrir a página ele tem um delay de 1000 e a páos isso ele leva até o id especificado na URL
+    */
+
+    var urlHash = window.location.href.split("#")[1];
+    $('html,body').animate({
+        scrollTop: $('.' + urlHash + ', #' + urlHash +',[name='+urlHash+']').first().offset().top -100
+    }, 1000);
+
+
+</script>
