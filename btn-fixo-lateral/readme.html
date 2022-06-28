@@ -1,0 +1,83 @@
+<style>
+
+	.falecom {
+		position: fixed;
+		top: 40%;
+		right: -5.6em;
+		z-index: 700;
+		display: block !important;
+		transform: rotate(-90deg);
+	}
+	.falecom a {
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s ease;
+	}
+	.falecom a.ativo {
+		opacity: 1;
+		visibility: visible;
+		transition: all .3s ease;
+	}
+	@media screen and (max-width: 740px) {
+		.falecom {
+			top: auto;
+			bottom: 0;
+			width: 100%;
+			right: auto;
+			left: 0;
+			transform: rotate(0deg);
+		}
+		.falecom a{
+			width: 100%;
+			text-align: center;
+			margin-bottom: -10em;
+		}
+		.falecom a.ativo {
+			margin-bottom: 0;
+		}
+	}
+	
+
+	</style>
+
+	<div id="section1" class="section">
+		...
+	<div>
+	<div id="section2" class="section">
+		...
+	<div>
+	<div id="section3" class="section">
+		...
+	<div>
+
+	<aside class="falecom">
+
+		<a href="#" data-section="section1" style="dispaly:none;"></a>
+		<a href="<?php echo $wp_url ?>/contato/" data-section="section2" title="Solicite orçamento agora" class="ativo cta fz-14 padd-laranja-button bg-vermelho color-branco">Solicite orçamento agora</a> 
+		<a href="#" data-section="section3" style="dispaly:none;"></a>
+		<a href="#" data-section="section4" style="dispaly:none;"></a>
+
+	</aside>
+	
+	
+	<script>
+
+		// guardamos todas as distancias de cada secção até ao todo da página e respetivo id
+		var alturas = {};
+		$('.section').each(function () {
+			alturas[$(this).prop('id')] = $(this).offset().top - 100; // ex: alturas['section_2'] = 600
+		});
+
+		// quando fazemos scoll vamos percorrer o nosso obj alturas e comparar a altura de cada secção com o que já andamos em scroll
+		$(window).on('scroll', function() {
+			for(var seccao in alturas) {
+			if($(window).scrollTop() >= alturas[seccao]) {
+				$('.falecom a').removeClass('ativo'); // removemos a classe ative
+				$('.falecom a[data-section="' +seccao+ '"]').addClass('ativo').animate({
+					opacity:1
+				},150); 
+			}
+			}
+		});
+
+	</script>
