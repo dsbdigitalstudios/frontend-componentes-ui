@@ -1,0 +1,57 @@
+<div id="slideBox" class="order-lg-2 order-1 col-12 col-lg-4 position-relative">
+
+	<style>
+
+		#slideBox .sidebarImoveis { transition: all .3s ease-in-out; }
+		#slideBox .sidebarImoveis.posFix{ width: 100%; max-width: 415px; top: 25vh; }
+		@media screen and ( max-width: 1170px ) {
+			#slideBox .sidebarImoveis.posFix{ max-width: 30vw; }
+		}
+		#slideBox .sidebarImoveis.bottomZero{ width: 100%; max-width: 415px; bottom: 0; height: fit-content; }
+		@media screen and ( max-width: 992px ) {
+			#slideBox .sidebarImoveis.posFix{  position: relative !important;  }
+			#slideBox .sidebarImoveis.bottomZero { position: relative !important; bottom: auto; }
+		}
+	</style>
+
+	<div  class="sidebarImoveis ">
+	<!-- ,,, -->
+	</div>
+
+	<script>
+
+		let sidebarAltura = $('#slideBox').height();
+			alturaTotal = $(window).height();
+			posicaoBox = $('#slideBox').offset().top;
+		
+			console.log('Altura da sidebar: ' + sidebarAltura );
+			console.log('Posição da sidebar: ' + posicaoBox );
+		
+		jQuery(window).scroll(function() {
+			let windowScroll = $(window).scrollTop();
+			console.log(windowScroll);
+
+			if($(window).width() > 1170) {
+
+				if(windowScroll > posicaoBox ){
+					console.log('Primeira condição: eleemnto fixo');
+					if(windowScroll < sidebarAltura) {
+						// console.log('Segunda condição: eleemnto fixo pois Scroll é < altura da caixa ');
+						$('#slideBox .sidebarImoveis').css('position', 'fixed').addClass('posFix').removeClass('bottomZero');
+					}else {
+						// console.log('Segunda condição: deixa como ta');
+						$('#slideBox .sidebarImoveis').css('position', 'absolute').addClass('bottomZero').removeClass('posFix');
+					}
+
+				}else {
+					// console.log('deixa como ta');
+					$('#slideBox .sidebarImoveis').css('position', 'relative').removeClass('bottomZero').removeClass('posFix');
+				}
+			}
+
+
+		});
+
+	</script>
+
+</div>
